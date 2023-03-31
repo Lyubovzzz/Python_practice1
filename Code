@@ -1,0 +1,17 @@
+per_cent = {'ТКБ': 5.6, 'СКБ': 5.9, 'ВТБ': 4.28, 'СБЕР': 4.0}
+a = per_cent.get("ТКБ")
+b = per_cent.get("СКБ")
+c = per_cent.get("ВТБ")
+d = per_cent.get("СБЕР")
+
+money = int(input( "Введите сумму вклада: "))
+while money <= 0:
+    print ("Недопустимое значение суммы!")
+    money = int(input( "Введите сумму вклада: "))
+
+
+e, f, g, k = (money*a)/100, (money*b)/100, (money*c)/100, (money*d)/100
+dep = [round(e, 4) , round(f, 4) , round(g, 4), round(k, 4)]
+print("Ваш депозит составит:" , dep)
+max_d = max(dep)
+print ( "Максимальная сумма, которую вы можете заработать - ", max_d)
